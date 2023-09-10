@@ -108,3 +108,13 @@ $cursor-color: #ffffff;
     }
     
   } 
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.3em;
+    margin: 1em;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
