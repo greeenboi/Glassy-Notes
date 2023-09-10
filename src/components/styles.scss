@@ -17,10 +17,18 @@
     h6 {
       line-height: 1.1;
     }
+    h1{
+        margin: 0px 0px;
+        border-bottom: 2px solid #E05091;
+    }
+    h2{
+        text-decoration: underline;
+    }
   
     code {
-      background-color: rgba(#616161, 0.1);
+      background-color: rgba(#191621, 0.1);
       color: #616161;
+      
     }
   
     pre {
@@ -29,7 +37,8 @@
       font-family: 'JetBrainsMono', monospace;
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
-  
+      border-left: 1px solid #0FAFCE;
+      margin: 0 1em;
       code {
         color: inherit;
         padding: 0;
@@ -38,6 +47,27 @@
       }
     }
   
+    ul{
+        list-style: none;
+        
+    }
+    li {
+        white-space: nowrap;
+        margin-right: 0.43em; 
+        display: flex;
+        align-items: center;
+      }
+
+    li::before {
+        content: ""; 
+        display: inline-block; 
+        margin-right: 0.43em; 
+        width: 5px; 
+        height: 5px; 
+        background: linear-gradient(to right, #7AA2F7, #D4BAFC); 
+        border-radius: 50%;        
+      }
+
     img {
       max-width: 100%;
       height: auto;
@@ -45,7 +75,7 @@
   
     blockquote {
       padding-left: 1rem;
-      border-left: 2px solid rgba(#0D0D0D, 0.1);
+      border-left: 2px solid rgba(#595858, 0.1);
     }
   
     hr {
