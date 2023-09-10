@@ -1,4 +1,15 @@
-/* Basic editor styles */
+$gradient-color-start: #88C2FD; 
+$gradient-color-end: #DBB9FC;
+$cursor-color: #ffffff;
+
+@mixin gradient-text {
+    font-weight: bold;
+    background: linear-gradient(to right, $gradient-color-start, $gradient-color-end);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
 .tiptap {
     > * + * {
       margin-top: 0.75em;
@@ -16,10 +27,16 @@
     h5,
     h6 {
       line-height: 1.1;
+      
     }
+    strong {
+        @include gradient-text;
+      }
+      
     h1{
         margin: 0px 0px;
         border-bottom: 2px solid #E05091;
+        
     }
     h2{
         text-decoration: underline;
@@ -30,6 +47,12 @@
       color: #616161;
       
     }
+    p {
+      font-size: medium;  
+    }&::selection {
+        background-color: $cursor-color;
+        caret-color: $cursor-color;
+      }
   
     pre {
       background: #0D0D0D;
@@ -83,4 +106,5 @@
       border-top: 2px solid rgba(#0D0D0D, 0.1);
       margin: 2rem 0;
     }
-  }
+    
+  } 
