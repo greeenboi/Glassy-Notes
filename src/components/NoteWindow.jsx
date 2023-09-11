@@ -15,9 +15,6 @@ import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
 
 
 
-const content = `
-
-`
 
 export default () => {
     const editor = useEditor({
@@ -91,7 +88,7 @@ display: none;
         </button>
       </BubbleMenu>}
 
-      {editor && <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
+      {editor && <div className='menu-float'><FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
           className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
@@ -108,14 +105,14 @@ display: none;
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={() => editor.isActive('orderedList')}
         >
-          Numbered List
+          <i class="ri-list-ordered-2"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
         >
           Separator
         </button>
-      </FloatingMenu>}
+      </FloatingMenu></div>}
 
       <EditorContent editor={editor} />
     </>
