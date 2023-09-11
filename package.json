@@ -20,7 +20,8 @@
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remixicon": "^3.5.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.4.0",
