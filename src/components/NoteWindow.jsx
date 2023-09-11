@@ -1,8 +1,7 @@
 import './styles.scss'
-
-import { Color } from '@tiptap/extension-color'
-import ListItem from '@tiptap/extension-list-item'
-import TextStyle from '@tiptap/extension-text-style'
+import { FaListOl, FaListUl } from 'react-icons/fa'
+import { RiSeparator } from 'react-icons/ri';
+import { AiOutlineItalic, AiOutlineBold, AiOutlineStrikethrough } from 'react-icons/ai';
 import { 
     BubbleMenu,
     EditorContent,
@@ -15,46 +14,9 @@ import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
 
 
 
-const content = `
 
-`
-
-export default () => {
-    const editor = useEditor({
-        extensions: [
-          StarterKit,
-        ],
-        content: `
-         <h2>
-  Hi there,
-</h2>
-<p>
-  this is a <em>basic</em> example of <strong>tiptap</strong>. Sure, there are all kind of basic text styles you’d probably expect from a text editor. But wait until you see the lists:
-</p>
-<ul>
-  <li>
-    That’s a bullet list with one …
-  </li>
-  <li>
-    … or two list items.
-  </li>
-</ul>
-<p>
-  Isn’t that great? And all of that is editable. But wait, there’s more. Let’s try a code block:
-</p>
-<pre><code class="language-css">body {
-display: none;
-}</code></pre>
-<p>
-  I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
-</p>
-<blockquote>
-  Wow, that’s amazing. Good work, boy! 👏
-  <br />
-  — Mom
-</blockquote>
-        `,
-      })
+export default ({ editor }) => {
+    
   return (
     <>
     {/* <NoteMenuBar /> */}
@@ -63,19 +25,19 @@ display: none;
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
-          Bold
+          <AiOutlineBold />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={editor.isActive('italic') ? 'is-active' : ''}
         >
-          Italic
+          <AiOutlineItalic />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleStrike().run()}
           className={editor.isActive('strike') ? 'is-active' : ''}
         >
-          Strike
+          <AiOutlineStrikethrough/>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1}).run()}
@@ -91,7 +53,7 @@ display: none;
         </button>
       </BubbleMenu>}
 
-      {editor && <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
+      {editor && <div className='menu-float'><FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
           className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
@@ -102,20 +64,20 @@ display: none;
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={editor.isActive('bulletList') ? 'is-active' : ''}
         >
-          Bullet List
+          <FaListOl />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={() => editor.isActive('orderedList')}
         >
-          Numbered List
+          <FaListOl />
         </button>
         <button
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
         >
-          Separator
+          <RiSeparator />
         </button>
-      </FloatingMenu>}
+      </FloatingMenu></div>}
 
       <EditorContent editor={editor} />
     </>
