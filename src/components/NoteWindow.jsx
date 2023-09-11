@@ -1,6 +1,7 @@
 import './styles.scss'
 import { FaListOl, FaListUl } from 'react-icons/fa'
 import { RiSeparator } from 'react-icons/ri';
+import { AiOutlineItalic, AiOutlineBold, AiOutlineStrikethrough } from 'react-icons/ai';
 import { 
     BubbleMenu,
     EditorContent,
@@ -24,19 +25,19 @@ export default ({ editor }) => {
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
-          Bold
+          <AiOutlineBold />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={editor.isActive('italic') ? 'is-active' : ''}
         >
-          Italic
+          <AiOutlineItalic />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleStrike().run()}
           className={editor.isActive('strike') ? 'is-active' : ''}
         >
-          Strike
+          <AiOutlineStrikethrough/>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1}).run()}
