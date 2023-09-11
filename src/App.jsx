@@ -37,6 +37,9 @@ const App = () => {
 
   return (
     <main>
+      <nav>
+        {`!! Code for navbar with remaining buttons like codeblock and blockquote remaining !!`}
+      </nav>
       <NoteWindow />
     </main>
   );
