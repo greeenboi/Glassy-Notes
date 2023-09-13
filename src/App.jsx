@@ -36,6 +36,7 @@ const App = () => {
   //   });
   // };
 
+  
   const editor = useEditor({
     extensions: [
       StarterKit,
