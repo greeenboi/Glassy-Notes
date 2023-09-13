@@ -10,6 +10,7 @@ import {
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
+import NoteMenuBar from './NoteMenuBar';
 // import NoteMenuBar from './NoteMenuBar'
 
 
@@ -20,6 +21,7 @@ export default ({ editor }) => {
   return (
     <>
     {/* <NoteMenuBar /> */}
+    {editor && <NoteMenuBar editor={editor} />}
       {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -79,7 +81,7 @@ export default ({ editor }) => {
         </button>
       </FloatingMenu></div>}
 
-      <EditorContent editor={editor} />
+      <EditorContent editor={editor}  />
     </>
   )
 }

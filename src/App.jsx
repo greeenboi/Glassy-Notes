@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-
+import "./App.css"
 import NoteWindow from './components/NoteWindow';
 import NoteMenuBar from './components/NoteMenuBar';
 
@@ -36,6 +36,7 @@ const App = () => {
   //   });
   // };
 
+  
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -73,7 +74,7 @@ const App = () => {
   })
 
   return (
-    <main>
+    <main className='window'>
       {/* <NoteMenuBar editor={editor} /> */}
       <NoteWindow editor={editor} />
     </main>
