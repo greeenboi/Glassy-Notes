@@ -11,7 +11,7 @@ import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
 import NoteMenuBar from './NoteMenuBar';
-// import NoteMenuBar from './NoteMenuBar'
+
 
 
 
