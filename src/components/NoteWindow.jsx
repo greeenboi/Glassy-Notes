@@ -1,7 +1,7 @@
 import './styles.scss'
-import { FaListOl, FaListUl } from 'react-icons/fa'
+import { FaListOl, FaListUl, FaAlignJustify } from 'react-icons/fa'
 import { RiSeparator } from 'react-icons/ri';
-import { AiOutlineItalic, AiOutlineBold, AiOutlineStrikethrough } from 'react-icons/ai';
+import { AiOutlineItalic, AiOutlineBold, AiOutlineStrikethrough, AiOutlineAlignLeft, AiOutlineAlignRight, AiOutlineAlignCenter } from 'react-icons/ai';
 import { 
     BubbleMenu,
     EditorContent,
@@ -22,7 +22,7 @@ export default ({ editor }) => {
     <>
     {/* <NoteMenuBar /> */}
     {editor && <NoteMenuBar editor={editor} />}
-      {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
+      {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor} >
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
@@ -40,18 +40,21 @@ export default ({ editor }) => {
           className={editor.isActive('strike') ? 'is-active' : ''}
         >
           <AiOutlineStrikethrough/>
+        </button>       
+        <button onClick={() => editor.chain().focus().setTextAlign('left').run()} className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}>
+          <AiOutlineAlignLeft/>
         </button>
-        <button
-          onClick={() => editor.chain().focus().toggleHeading({ level: 1}).run()}
-          className={editor.isActive('heading', { level: 1 })}
-        >
-          H1
+
+        <button onClick={() => editor.chain().focus().setTextAlign('center').run()} className={editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}>
+          <AiOutlineAlignCenter/>
         </button>
-        <button
-          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
-        >
-          H2
+        
+        <button onClick={() => editor.chain().focus().setTextAlign('right').run()} className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}>
+          <AiOutlineAlignRight/>
+        </button>
+        
+        <button onClick={() => editor.chain().focus().setTextAlign('justify').run()} className={editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}>
+          <FaAlignJustify />
         </button>
       </BubbleMenu>}
 
@@ -79,6 +82,7 @@ export default ({ editor }) => {
         >
           <RiSeparator />
         </button>
+        
       </FloatingMenu></div>}
 
       <EditorContent editor={editor}  />

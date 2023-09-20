@@ -5,6 +5,7 @@ import "./App.css"
 import NoteWindow from './components/NoteWindow';
 import Highlight from '@tiptap/extension-highlight'
 import Typography from '@tiptap/extension-typography'
+import TextAlign from '@tiptap/extension-text-align'
 
 // Import the necessary Node.js modules
 // const fs = require('fs');
@@ -43,6 +44,9 @@ const App = () => {
       StarterKit,
       Highlight,
       Typography,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
+      }),
     ],
     content: `
         <h1>Hi there,</h1>
