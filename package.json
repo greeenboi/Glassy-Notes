@@ -12,8 +12,10 @@
   "dependencies": {
     "@tauri-apps/api": "^1.4.0",
     "@tiptap/extension-color": "^2.1.8",
+    "@tiptap/extension-highlight": "^2.1.10",
     "@tiptap/extension-list-item": "^2.1.8",
     "@tiptap/extension-text-style": "^2.1.8",
+    "@tiptap/extension-typography": "^2.1.10",
     "@tiptap/pm": "^2.1.8",
     "@tiptap/react": "^2.1.8",
     "@tiptap/starter-kit": "^2.1.8",

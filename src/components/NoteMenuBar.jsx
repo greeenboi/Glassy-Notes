@@ -69,12 +69,12 @@ export default ({ editor }) => {
       action: () => editor.chain().focus().toggleOrderedList().run(),
       isActive: () => editor.isActive('orderedList'),
     },
-    {
-      icon: 'list-check-2',
-      title: 'Task List',
-      action: () => editor.chain().focus().toggleTaskList().run(),
-      isActive: () => editor.isActive('taskList'),
-    },
+    // {
+    //   icon: 'list-check-2',
+    //   title: 'Task List',
+    //   action: () => editor.chain().focus().toggleTaskList().run(),
+    //   isActive: () => editor.isActive('taskList'),
+    // },
     {
       icon: 'code-box-line',
       title: 'Code Block',

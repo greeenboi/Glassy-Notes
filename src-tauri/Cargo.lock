@@ -3,8 +3,8 @@
 version = 3
 
 [[package]]
-name = "Glassy_Notes"
-version = "0.0.1"
+name = "_Glassy_Notes"
+version = "0.0.2"
 dependencies = [
  "serde",
  "serde_json",
