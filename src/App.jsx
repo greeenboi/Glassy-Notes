@@ -3,7 +3,8 @@ import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import "./App.css"
 import NoteWindow from './components/NoteWindow';
-import NoteMenuBar from './components/NoteMenuBar';
+import Highlight from '@tiptap/extension-highlight'
+import Typography from '@tiptap/extension-typography'
 
 // Import the necessary Node.js modules
 // const fs = require('fs');
@@ -40,6 +41,8 @@ const App = () => {
   const editor = useEditor({
     extensions: [
       StarterKit,
+      Highlight,
+      Typography,
     ],
     content: `
         <h1>Hi there,</h1>

@@ -70,18 +70,24 @@ $cursor-color: #ffffff;
       }
     }
   
-    ul{
-        list-style: none;
-        
+    ol {
+      list-style: decimal;
     }
-    li {
+    
+    ul{
+        list-style: none;     
+        margin: 1rem;   
+    }
+    
+    ul > li {
         white-space: nowrap;
         margin-right: 0.43em; 
         display: flex;
         align-items: center;
+      
       }
 
-    li::before {
+    ul > li::before {
         content: ""; 
         display: inline-block; 
         margin-right: 0.43em; 
