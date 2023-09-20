@@ -85,7 +85,7 @@ export default ({ editor }) => {
         
       </FloatingMenu></div>}
 
-      <EditorContent editor={editor}  />
+      <EditorContent editor={editor} />
     </>
   )
 }
