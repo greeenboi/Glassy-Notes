@@ -1,10 +1,35 @@
 import './MenuBar.scss'
-
+import { save } from "@tauri-apps/api/dialog";
+import { writeFile } from "@tauri-apps/api/fs";
 import React, { Fragment } from 'react'
-
+import { AiOutlineDownload } from 'react-icons/ai';
 import MenuItem from './MenuItem.jsx'
 
 export default ({ editor }) => {
+  const saveHTMLLocally = async () => {
+    const suggestedFilename = "document.html";
+    console.log('Started Process:');
+    const htmlContent = editor.getHTML();
+    console.log(editor.getHTML());
+    try {
+      
+      const filePath = await save({
+        defaultPath: suggestedFilename,
+        filters: [{ name: "HTML Files", extensions: ["html"] }],
+      });
+  
+      if (!filePath) {
+        console.log('No file path selected/User Cancelled Operation');
+        return;
+      }
+  
+      await writeFile({ path: filePath, contents: htmlContent, options: {} });
+  
+      alert("HTML content saved successfully!");
+    } catch (error) {
+      alert("Failed to save HTML content: " + error);
+    }
+  };
   const items = [
     {
       icon: 'bold',
@@ -122,6 +147,10 @@ export default ({ editor }) => {
       title: 'Redo',
       action: () => editor.chain().focus().redo().run(),
     },
+    {
+      type: 'divider',
+    }
+    
   ]
 
   return (
@@ -131,6 +160,7 @@ export default ({ editor }) => {
           {item.type === 'divider' ? <div className="divider" /> : <MenuItem {...item} />}
         </Fragment>
       ))}
+      <button onClick={saveHTMLLocally} title='Download'><AiOutlineDownload/></button>
     </div>
   )
 }
