@@ -77,7 +77,9 @@ const App = () => {
       <NoteWindow  editor={editor}/>
       <div className="character-count">
         {editor.storage.characterCount.characters()} characters 
-        {editor.storage.characterCount.words()} words
+      </div>
+      <div className="character-count">
+        {`${editor.storage.characterCount.words()} words`}
       </div>
     </main>
   );

@@ -172,3 +172,16 @@ $cursor-color: #ffffff;
   margin: auto;
   padding-left: 10rem;
 }
+.character-count{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: inline-flex;
+  flex-direction: row;
+  color: #868e96;
+  letter-spacing: 0.1rem;
+  margin: 0.3em;
+  padding: 0.1em;
+  width: max-content;
+  
+  border-left: 1px solid #0FAFCE ;
+  
+}
