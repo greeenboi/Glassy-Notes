@@ -54,11 +54,15 @@ const App = () => {
       }),
     ],
     content: `
-        <h1>Hi there,</h1>
+        <h1><b>Welcome Fellow Enthusiast!</b></h1>
         <p>
-          this is a <em>basic</em> example of <strong><I>Glassy Notes</I></strong>. Sure, there are all kind of basic text styles you’d probably expect from a text editor. But wait until you see the rest.
+          This is the <em>Beta</em> Release of <strong><I>Glassy Notes</I></strong>. 
           <br/>
-          do <code> CTRL + A </code> and <code> DELETE</code> or <code>BACKSPACE</code> to start typing...
+          <br/>
+          <h4>Refer to github.com/greeenboi for Documentation and discussions.</h4>
+          <br/>
+          <br/>
+          <h4>Place your cursor anywhere within the boundary box to start typing...</h4>
         </p>
         <br/>
         <br/>
