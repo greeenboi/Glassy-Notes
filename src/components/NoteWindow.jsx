@@ -6,22 +6,21 @@ import {
     BubbleMenu,
     EditorContent,
     FloatingMenu,
-    useEditor, } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
-import React from 'react'
-import remixiconUrl from 'remixicon/fonts/remixicon.symbol.svg'
+    } from '@tiptap/react'
+
+import React, { useEffect, useRef } from 'react'
 import NoteMenuBar from './NoteMenuBar';
 
 
 
 
 
+
 export default ({ editor }) => {
-    
   return (
-    <>
+    <section >
     {/* <NoteMenuBar /> */}
-    {editor && <NoteMenuBar editor={editor} />}
+      {editor && <NoteMenuBar editor={editor} />}
       {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor} >
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -69,11 +68,11 @@ export default ({ editor }) => {
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={editor.isActive('bulletList') ? 'is-active' : ''}
         >
-          <FaListOl />
+          <FaListUl />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
-          className={() => editor.isActive('orderedList')}
+          className={editor.isActive('orderedList') ? 'is-active' : ''}
         >
           <FaListOl />
         </button>
@@ -86,6 +85,6 @@ export default ({ editor }) => {
       </FloatingMenu></div>}
 
       <EditorContent editor={editor} />
-    </>
+    </section>
   )
 }
