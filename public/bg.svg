@@ -1,0 +1,113 @@
+ <svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>.Rectangle_2_781 {
+            animation: 0.45s linear 0s 1 normal forwards running Rectangle_2_781;
+                opacity: 0;
+        }
+        @keyframes Rectangle_2_781 {
+            0% {
+                opacity: 0;
+            }
+            44.44% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }.Rectangle_3_921 {
+            animation: 0.45s linear 0s 1 normal forwards running Rectangle_3_921;
+                opacity: 0;
+        }
+        @keyframes Rectangle_3_921 {
+            0% {
+                opacity: 0;
+            }
+            44.44% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }.Polygon_1_578 {
+            animation: 0.45s linear 0s 1 normal forwards running Polygon_1_578;
+                opacity: 0;
+        }
+        @keyframes Polygon_1_578 {
+            0% {
+                opacity: 0;
+            }
+            44.44% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }.Rectangle_4_2 {
+            animation: 0.45s linear 0s 1 normal forwards running Rectangle_4_2;
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+        }
+        @keyframes Rectangle_4_2 {
+            0% {
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(531px) translateY(383px);
+                opacity: 1;
+            }
+        }.Rectangle_5_566 {
+            animation: 0.45s linear 0s 1 normal forwards running Rectangle_5_566;
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+        }
+        @keyframes Rectangle_5_566 {
+            0% {
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+            }
+            77.78% {
+                transform: translateX(531px) translateY(335px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(531px) translateY(335px);
+                opacity: 1;
+            }
+        }.Rectangle_6_807 {
+            animation: 0.45s linear 0s 1 normal forwards running Rectangle_6_807;
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+        }
+        @keyframes Rectangle_6_807 {
+            0% {
+                transform: translateX(531px) translateY(395px);
+                opacity: 0;
+            }
+            88.89% {
+                transform: translateX(531px) translateY(359px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(531px) translateY(359px);
+                opacity: 1;
+            }
+        }
+        </style>
+        <g clip-path="url(#clip_0_71)" width="96" height="96" data-name="logo">
+            
+            
+            <rect width="96" height="96" fill="#3DD9EB" data-name="Rectangle 2" class="Rectangle_2_781" transform="translate(519 317)"/>
+            <rect width="30" height="30" fill="#7DEBF5" data-name="Rectangle 3" class="Rectangle_3_921" transform="translate(585 383)"/>
+            <path d="M30.0004 0V30H0L30.0004 0Z" fill="#6C19FF" data-name="Polygon 1" class="Polygon_1_578" transform="translate(585 383)"/>
+            <rect width="36" height="10" fill="#00B3D7" data-name="Rectangle 4" class="Rectangle_4_2"/>
+            <rect width="72" height="10" fill="#00B3D7" data-name="Rectangle 5" class="Rectangle_5_566"/>
+            <rect width="72" height="10" fill="#00B3D7" data-name="Rectangle 6" class="Rectangle_6_807"/>
+        </g>
+        <defs><clipPath id="clip_0_71"><rect width="800" height="600"/></clipPath>
+        <pattern id="pattern_390" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <!-- <use xlink:href="#image___390" transform="scale(0.0104167)"/> -->
+        </pattern>
+        <!-- <image id="image___390" width="96" height="96" xlink:href="data:image/png;sbase64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABzklEQVR4nO2ZS07EMBAF+xocpm8DrNjDJlzKhxn1GbwaITTswhYhksnH9nNIldQXqPInkc0AAAAAAAAAAAAm8MgjkycdVF84yM+zC5AAod2hBAgCnPqOMO6ATAD1KnR2gF6EcwTpZbhguAOCAPJV6OwAvQjnCNLLcMFwBwQB5KvQ2QF6EX72I8jS5V+NE+BCAHZA5ggyjiDuAOcSvnAJ8xWU+Qw1PkP1Pz7e2XTzI3bWMQJkAqhXobMD9CKcI0gvwwXDHRAEkK9CZwfwHlCNxWdhB48oxoOMXpzxIqaXZzxJHn/8aJ+hamFGAL00YwfoxdlZj6CzjhEgE0C9Cp0doBfhHEF6GS4Y7oAgQJcz5M/q8/x6u7IDQhPg8f1rfHkY+zmCevthGhrIJ0BqH+CnfAKktgF+yydAahfgL/kESG0CTMknQKofYE4+AVLdAPfkEyDVC7BEflcBepuhgXwCRPkAa+QTIMoGWCufAFEuwBb5BIgyAbbKJ0DsD7BHPgFiX4C98gkQ2wOUkE+A2BaglHwCxPoAJeUTINYFKC2fALE8QA35BIhlAWrJJ0DcD1BTPgFiPkBt+QSI6QBPb7eP2vKbBAAAAAAAAAAAADsq36f+oxaXbWukAAAAAElFTkSuQmCC"/> -->
+        
+        </defs>
+        </svg>
