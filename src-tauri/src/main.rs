@@ -30,7 +30,7 @@ fn main() {
           tauri::async_runtime::spawn(async move {
             
             println!("Initializing...");
-            std::thread::sleep(std::time::Duration::from_secs(2));
+            std::thread::sleep(std::time::Duration::from_secs(5));
             println!("Done initializing.");
     
             
