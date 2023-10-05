@@ -8,7 +8,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     invoke('close_splashscreen');
-  }, 1000);
+  }, 2000);
 })
   
 ReactDOM.createRoot(document.getElementById("root")).render(

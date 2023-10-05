@@ -10,7 +10,7 @@ import TextAlign from '@tiptap/extension-text-align'
 import { Emoticons } from './components/Emoticons';
 import { open } from '@tauri-apps/api/dialog';
 import { readTextFile } from '@tauri-apps/api/fs';
-
+import { AiOutlineUpload } from 'react-icons/ai';
 
 // Import the necessary Node.js modules
 // const fs = require('fs');
@@ -19,30 +19,30 @@ import { readTextFile } from '@tauri-apps/api/fs';
 
 
 const App = () => {
-  const saveJSONLocally = async () => {
-    const suggestedFilename = "document.json";
-    console.log('Started Process:');
-    const jsonContent = editor.getJSON();
-    console.log(editor.getJSON());
-    try {
+  // const saveJSONLocally = async () => {
+  //   const suggestedFilename = "document.json";
+  //   console.log('Started Process:');
+  //   const jsonContent = editor.getJSON();
+  //   console.log(editor.getJSON());
+  //   try {
 
-      const filePath = await save({
-        defaultPath: suggestedFilename,
-        filters: [{ name: "JSON Files", extensions: ["json"] }],
-      });
+  //     const filePath = await save({
+  //       defaultPath: suggestedFilename,
+  //       filters: [{ name: "JSON Files", extensions: ["json"] }],
+  //     });
 
-      if (!filePath) {
-        alert('No file path selected/User Cancelled Operation');
-        return;
-      }
+  //     if (!filePath) {
+  //       alert('No file path selected/User Cancelled Operation');
+  //       return;
+  //     }
 
-      await writeFile({ path: filePath, contents: jsonContent, options: {} });
+  //     await writeFile({ path: filePath, contents: jsonContent, options: {} });
 
-      alert("JSON content saved successfully!");
-    } catch (error) {
-      alert("Failed to save JSON content: " + error);
-    }
-  }
+  //     alert("JSON content saved successfully!");
+  //   } catch (error) {
+  //     alert("Failed to save JSON content: " + error);
+  //   }
+  // }
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -83,7 +83,7 @@ const App = () => {
         let content = await readTextFile(filepath);
         
         editor.commands.setContent(content);
-        alert('Updated content');
+        alert('Opened content from file: ' + filepath);
 
     } catch (e) {
         console.log(e);
@@ -101,7 +101,7 @@ const App = () => {
       <div className="character-count">
         {`${editor.storage.characterCount.words()} words`}
       </div>
-      <button onClick={OpenFile}>open file</button>
+      <button onClick={OpenFile}>{ <AiOutlineUpload /> }</button>
     </main>
   );
 };
