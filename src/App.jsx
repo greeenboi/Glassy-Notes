@@ -8,6 +8,9 @@ import Highlight from '@tiptap/extension-highlight'
 import Typography from '@tiptap/extension-typography'
 import TextAlign from '@tiptap/extension-text-align'
 import { Emoticons } from './components/Emoticons';
+import { open } from '@tauri-apps/api/dialog';
+import { readTextFile } from '@tauri-apps/api/fs';
+
 
 // Import the necessary Node.js modules
 // const fs = require('fs');
@@ -16,8 +19,6 @@ import { Emoticons } from './components/Emoticons';
 
 
 const App = () => {
-
- 
   const saveJSONLocally = async () => {
     const suggestedFilename = "document.json";
     console.log('Started Process:');
@@ -31,7 +32,7 @@ const App = () => {
       });
 
       if (!filePath) {
-        console.log('No file path selected/User Cancelled Operation');
+        alert('No file path selected/User Cancelled Operation');
         return;
       }
 
@@ -54,30 +55,45 @@ const App = () => {
       }),
     ],
     content: `
-        <h1><b>Welcome Fellow Enthusiast!</b></h1>
-        <p>
-          This is the <em>Beta</em> Release of <strong><I>Glassy Notes</I></strong>. 
-          <br/>
-          <br/>
-          <h4>Refer to github.com/greeenboi for Documentation and discussions.</h4>
-          <br/>
-          <br/>
-          <h4>Place your cursor anywhere within the boundary box to start typing...</h4>
-        </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-            `,
+    <h1><b>Welcome Fellow Enthusiast!</b></h1>
+    <p>
+      This is the <em>Beta</em> Release of <strong><I>Glassy Notes</I></strong>. 
+      <br/>
+      <br/>
+      <h4>Refer to github.com/greeenboi for Documentation and discussions.</h4>
+      <br/>
+      <br/>
+      <h4>Place your cursor anywhere within the boundary box to start typing...</h4>
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+        `,
   });
   if (!editor) {
     return null
   }
+
+  
+  const OpenFile = async () => {
+    try {
+        let filepath = await open();
+        let content = await readTextFile(filepath);
+        
+        editor.commands.setContent(content);
+        alert('Updated content');
+
+    } catch (e) {
+        console.log(e);
+        alert('Error while opening file', e);
+    }
+};
+  
   return (
     <main className='window'>
       
-      {/* <button onClick={saveJSONLocally}>Save as JSON</button> */}
       <NoteWindow  editor={editor}/>
       <div className="character-count">
         {editor.storage.characterCount.characters()} characters 
@@ -85,6 +101,7 @@ const App = () => {
       <div className="character-count">
         {`${editor.storage.characterCount.words()} words`}
       </div>
+      <button onClick={OpenFile}>open file</button>
     </main>
   );
 };

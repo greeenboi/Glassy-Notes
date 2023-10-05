@@ -1,11 +1,15 @@
 import './MenuBar.scss'
 import { save } from "@tauri-apps/api/dialog";
 import { writeFile } from "@tauri-apps/api/fs";
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { AiOutlineDownload } from 'react-icons/ai';
 import MenuItem from './MenuItem.jsx'
+import Notification from './Notification';
+import { ask } from "@tauri-apps/api/dialog";
+import { sendNotification } from "@tauri-apps/api/notification";
 
 export default ({ editor }) => {
+  const [saved, setSaved] = useState(false);
   const saveHTMLLocally = async () => {
     const suggestedFilename = "document.html";
     console.log('Started Process:');
@@ -25,7 +29,13 @@ export default ({ editor }) => {
   
       await writeFile({ path: filePath, contents: htmlContent, options: {} });
   
-      alert("HTML content saved successfully!");
+      alert(`HTML content saved successfully under ${filePath}`);
+      sendNotification({
+        title: `Saved`,
+        body: `Congrats on completing a New note!🎉`,
+      });
+      setSaved(true);
+      
     } catch (error) {
       alert("Failed to save HTML content: " + error);
     }

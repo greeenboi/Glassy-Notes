@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles.css";
 import { invoke } from "@tauri-apps/api/tauri";
-import { appWindow } from "@tauri-apps/api/window";
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  invoke('close_splashscreen')
+  setTimeout(() => {
+    invoke('close_splashscreen');
+  }, 1000);
 })
   
 ReactDOM.createRoot(document.getElementById("root")).render(

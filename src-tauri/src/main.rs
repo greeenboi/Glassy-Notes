@@ -23,14 +23,14 @@ async fn close_splashscreen(window: Window) {
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet, close_splashscreen])
-        .setup(|app| {
-          let splashscreen_window = app.get_window("splashscreen").unwrap();
-          let main_window = app.get_window("main").unwrap();
+        .setup(|app: &mut tauri::App| {
+          let splashscreen_window: Window = app.get_window("splashscreen").unwrap();
+          let main_window: Window = app.get_window("main").unwrap();
           
           tauri::async_runtime::spawn(async move {
             
             println!("Initializing...");
-            std::thread::sleep(std::time::Duration::from_secs(2));
+            std::thread::sleep(std::time::Duration::from_secs(5));
             println!("Done initializing.");
     
             

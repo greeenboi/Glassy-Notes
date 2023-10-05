@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "Glassy Notes",
-    "version": "0.1.1"
+    "version": "0.1.2"
   },
   "tauri": {
     "allowlist": {
@@ -16,9 +16,12 @@
       "shell": {
         "all": false,
         "open": true
+        
       },
-      "dialog": {
-        "save": true
+      "dialog": { 
+        "open": true,
+        "message": true,
+        "save": true 
       },"fs": {
         "writeFile": true,
         "removeFile": true,
@@ -27,6 +30,9 @@
       },
       "path": {
         "all": true
+      },
+      "notification": {
+        "all": true 
       }
     },
     "bundle": {
