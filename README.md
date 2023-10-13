@@ -1,4 +1,4 @@
-![waves_btm](https://github.com/greeenboi/Glassy-Notes/assets/118198968/794b3e18-f099-4654-8e0b-d8b3eca9c5b6)![waves_btm](https://github.com/greeenboi/Glassy-Notes/assets/118198968/3e685434-dbd9-4142-a6cd-f7ae0d1ebefa)![waves_top](https://github.com/greeenboi/Glassy-Notes/assets/118198968/dbd95e4b-1b84-47ee-b604-58350c1b529c)
+![waves_top](https://github.com/greeenboi/Glassy-Notes/assets/118198968/dbd95e4b-1b84-47ee-b604-58350c1b529c)
 <h1 align=center>
 Glassy Notes
 </h1>
