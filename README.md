@@ -21,13 +21,14 @@ Glassy Notes
 
 ## Table of Contents
 
-- ### [Features](#features)
-- ### [Contributions](#contributions)
-- ### [Downloads](#downloads)
-- ### [How to get started](#how-to-get-started)
-- ### [Code of Conduct](#code-of-conduct)
-- ### [Recommended IDE Setup](#recommended-ide-setup)
-- ### [License](#license)
+- ### [Features](#features-1)
+- ### [Downloads](#downloads-1)
+- ### [Gallery](#gallery)
+- ### [Contributions](#contributions-1)
+- ### [How to get started](#how-to-get-started-1)
+- ### [Code of Conduct](#code-of-conduct-1)
+- ### [Recommended IDE Setup](#recommended-ide-setup-1)
+- ### [License](#license-1)
 
 
 
@@ -56,6 +57,7 @@ Refer to the Releases tab on the right or visit the [Release page](https://tauri
 
 <details closed>
 <summary><h3>Screenshots</h3></summary>
+  <img src="https://github.com/greeenboi/Glassy-Notes/assets/118198968/86f1fbb5-17a7-4d4d-bf41-2f8eca1d65d4" alt="beta v0.1.1"/>
 </details>
 
 ***
