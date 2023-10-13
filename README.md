@@ -1,15 +1,18 @@
-svg top
-
+![waves_btm](https://github.com/greeenboi/Glassy-Notes/assets/118198968/794b3e18-f099-4654-8e0b-d8b3eca9c5b6)![waves_btm](https://github.com/greeenboi/Glassy-Notes/assets/118198968/3e685434-dbd9-4142-a6cd-f7ae0d1ebefa)![waves_top](https://github.com/greeenboi/Glassy-Notes/assets/118198968/dbd95e4b-1b84-47ee-b604-58350c1b529c)
+<h1 align=center>
+Glassy Notes
+</h1>
 <p align=center>
 <a href="https://github.com/greeenboi/Glassy-Notes/releases/tag/v0.1.1-beta">
   <img src="https://img.shields.io/badge/Version-Beta%200.1.1-8A2BE2" alt="Version">
 </a>
+  <img src="https://github.com/greeenboi/Glassy-Notes/assets/118198968/9677918a-9705-4a2c-bffb-dc0a02de0c3c"/>
 <a href="https://tauri-update-server-kappa.vercel.app/">
     <img src="https://img.shields.io/badge/Deployed%20on-Vercel-333?style=social&logo=vercel" alt="Deployed on Vercel"/>
 </a>
 </p>
 
-# Glassy Notes
+
 
 <p>🌟 Picture this: You, sitting at your desk, staring at that plain old notepad, feeling like something's missing. You want more, something magical, something that just gets you excited to work and make notes on. That's where Glassy Notes steps in, your personal productivity genie! 🪄✨
 </p>
