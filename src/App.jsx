@@ -55,12 +55,12 @@ const App = () => {
       }),
     ],
     content: `
-    <h1><b>Welcome Fellow Enthusiast!</b></h1>
+    <h1><b>Welcome Fellow Creator!</b></h1>
     <p>
-      This is the <em>Beta</em> Release of <strong><I>Glassy Notes</I></strong>. 
+      This is the <em>First</em> Release of <strong><I>Glassy Notes</I></strong>. 
       <br/>
       <br/>
-      <h4>Refer to github.com/greeenboi for Documentation and discussions.</h4>
+      <h4>Refer to <code>https://github.com/greeenboi/Glassy-Notes#readme</code> for Documentation and discussions.</h4>
       <br/>
       <br/>
       <h4>Place your cursor anywhere within the boundary box to start typing...</h4>

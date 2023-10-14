@@ -67,6 +67,17 @@
         "url": "/splashscreen.html",
         "label": "splashscreen"
       }
-    ]
+    ],
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://gist.githubusercontent.com/greeenboi/5bf7d94b2b0a50d25d9cc4316142d5c7/raw/"
+      ],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDUxNTk0REY1QkU4NDExODIKUldTQ0VZUys5VTFaVVR6a2ZENTdNSytTaElieVp3bXhUMFdNZ1hmNGo3TVJwVUtaZWRUcW5ZaTIK",
+      "windows": {
+        "installMode": "basicUi"
+      }
+    }
   }
 }
