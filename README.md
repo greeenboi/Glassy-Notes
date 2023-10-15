@@ -3,8 +3,8 @@
 Glassy Notes
 </h1>
 <p align=center>
-<a href="https://github.com/greeenboi/Glassy-Notes/releases/tag/v0.1.1-beta">
-  <img src="https://img.shields.io/badge/Version-Beta%200.1.1-8A2BE2" alt="Version">
+<a href="https://github.com/greeenboi/Glassy-Notes/releases/tag/v0.2.1">
+  <img src="https://img.shields.io/badge/Version-Beta%200.2.1-8A2BE2" alt="Version">
 </a>
   <img src="https://github.com/greeenboi/Glassy-Notes/assets/118198968/9677918a-9705-4a2c-bffb-dc0a02de0c3c"/>
 <a href="https://tauri-update-server-kappa.vercel.app/">
